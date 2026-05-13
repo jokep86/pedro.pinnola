@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Pedro Pinnola — DevOps Engineer</title>
+  <meta name="description" content="Pedro Pinnola — DevOps Engineer based in Argentina. Kubernetes, AWS, Terraform, CI/CD." />
+  <meta name="theme-color" content="#0b1220" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet" />
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-V1K35ZML4Q"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-V1K35ZML4Q');
+  </script>
+
+  <style>
+    :root {
+      --bg: #f7f8fb;
+      --surface: #ffffff;
+      --ink: #0b1220;
+      --ink-soft: #334155;
+      --muted: #64748b;
+      --line: #e5e7eb;
+      --accent: #2563eb;
+      --accent-soft: #eef2ff;
+      --chip-bg: #f1f5f9;
+      --chip-ink: #1e293b;
+      --shadow: 0 1px 2px rgba(15, 23, 42, .04), 0 8px 24px rgba(15, 23, 42, .06);
+      --radius: 14px;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #0b1220;
+        --surface: #111827;
+        --ink: #e5e7eb;
+        --ink-soft: #cbd5e1;
+        --muted: #94a3b8;
+        --line: #1f2937;
+        --accent: #60a5fa;
+        --accent-soft: #1e293b;
+        --chip-bg: #1f2937;
+        --chip-ink: #e2e8f0;
+        --shadow: 0 1px 2px rgba(0, 0, 0, .4), 0 10px 30px rgba(0, 0, 0, .35);
+      }
+    }
+
+    * { box-sizing: border-box; }
+
+    html, body {
+      margin: 0;
+      padding: 0;
+      background: var(--bg);
+      color: var(--ink);
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      font-size: 16px;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+      transition: color .15s ease, border-color .15s ease;
+      border-bottom: 1px solid transparent;
+    }
+    a:hover { border-bottom-color: var(--accent); }
+
+    main.resume {
+      max-width: 880px;
+      margin: 48px auto;
+      background: var(--surface);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+
+    /* Header */
+    header.hero {
+      padding: 48px 56px 32px;
+      border-bottom: 1px solid var(--line);
+      background:
+        radial-gradient(1200px 200px at -10% -50%, var(--accent-soft), transparent 60%),
+        var(--surface);
+    }
+
+    .name-row {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    h1 {
+      font-size: 2.4rem;
+      font-weight: 800;
+      letter-spacing: -.02em;
+      margin: 0 0 6px;
+    }
+
+    .title {
+      display: inline-block;
+      color: var(--accent);
+      font-weight: 600;
+      font-size: 1.05rem;
+      letter-spacing: .02em;
+      margin: 0;
+    }
+
+    .contact {
+      list-style: none;
+      padding: 0;
+      margin: 20px 0 0;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px 18px;
+      color: var(--ink-soft);
+      font-size: .95rem;
+    }
+    .contact li {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .contact svg {
+      width: 16px;
+      height: 16px;
+      stroke: var(--muted);
+      flex-shrink: 0;
+    }
+    .contact a { color: var(--ink-soft); }
+    .contact a:hover { color: var(--accent); }
+
+    /* Sections */
+    section {
+      padding: 36px 56px;
+      border-bottom: 1px solid var(--line);
+    }
+    section:last-of-type { border-bottom: 0; }
+
+    h2 {
+      font-size: .8rem;
+      font-weight: 700;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin: 0 0 24px;
+    }
+
+    /* Skills */
+    .skills {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px 32px;
+    }
+    .skill {
+      display: flex;
+      gap: 14px;
+      align-items: flex-start;
+    }
+    .skill .dot {
+      flex-shrink: 0;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--accent);
+      margin-top: 10px;
+      opacity: .85;
+    }
+    .skill-body { flex: 1; }
+    .skill-name {
+      font-weight: 600;
+      color: var(--ink);
+      font-size: .95rem;
+      display: block;
+    }
+    .skill-desc {
+      color: var(--muted);
+      font-size: .9rem;
+      line-height: 1.5;
+    }
+
+    /* Experience */
+    .experience {
+      display: flex;
+      flex-direction: column;
+      gap: 28px;
+    }
+    .role {
+      position: relative;
+      padding-left: 22px;
+    }
+    .role::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 8px;
+      bottom: 4px;
+      width: 2px;
+      background: var(--line);
+      border-radius: 2px;
+    }
+    .role::after {
+      content: "";
+      position: absolute;
+      left: -3px;
+      top: 8px;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--accent);
+      box-shadow: 0 0 0 4px var(--surface);
+    }
+    .role-head {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+      margin-bottom: 10px;
+    }
+    .role-title {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--ink);
+      margin: 0;
+    }
+    .role-company {
+      color: var(--accent);
+      font-weight: 600;
+    }
+    .role-dates {
+      font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
+      font-size: .82rem;
+      color: var(--muted);
+      white-space: nowrap;
+    }
+    .role ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+    .role ul li {
+      position: relative;
+      padding-left: 18px;
+      color: var(--ink-soft);
+      font-size: .95rem;
+      margin-bottom: 6px;
+    }
+    .role ul li::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 11px;
+      width: 6px;
+      height: 1px;
+      background: var(--muted);
+    }
+
+    /* Responsive */
+    @media (max-width: 720px) {
+      main.resume {
+        margin: 0;
+        border-radius: 0;
+        box-shadow: none;
+      }
+      header.hero { padding: 32px 24px 24px; }
+      section { padding: 28px 24px; }
+      h1 { font-size: 1.9rem; }
+      .skills { grid-template-columns: 1fr; }
+    }
+
+    /* Print */
+    @media print {
+      html, body { background: #fff; color: #000; font-size: 11pt; }
+      main.resume {
+        margin: 0;
+        max-width: none;
+        box-shadow: none;
+        border-radius: 0;
+      }
+      header.hero { padding: 0 0 16px; background: none; }
+      section { padding: 16px 0; border-color: #ddd; }
+      a { color: #000; border-bottom: 0; }
+      .role::after { box-shadow: none; }
+    }
+  </style>
+</head>
+<body>
+  <main class="resume">
+    <header class="hero">
+      <div class="name-row">
+        <div>
+          <h1>Pedro Pinnola</h1>
+          <p class="title">DevOps Engineer</p>
+        </div>
+      </div>
+      <ul class="contact">
+        <li>
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          Argentina
+        </li>
+        <li>
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg>
+          <a href="mailto:pedropinnola@gmail.com">pedropinnola@gmail.com</a>
+        </li>
+        <li>
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+          <a href="https://www.linkedin.com/in/pedropinnola">linkedin.com/in/pedropinnola</a>
+        </li>
+        <li>
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.37 1.9.72 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.35 1.85.59 2.81.72A2 2 0 0 1 22 16.92z"/></svg>
+          +54 9 294 431 2772
+        </li>
+      </ul>
+    </header>
+
+    <section aria-labelledby="skills-heading">
+      <h2 id="skills-heading">Skills</h2>
+      <div class="skills">
+        <div class="skill">
+          <span class="dot"></span>
+          <div class="skill-body">
+            <span class="skill-name">Troubleshooting &amp; Incident Management</span>
+            <span class="skill-desc">Expertise in resolving technical issues efficiently.</span>
+          </div>
+        </div>
+        <div class="skill">
+          <span class="dot"></span>
+          <div class="skill-body">
+            <span class="skill-name">Computer &amp; Networking Concepts</span>
+            <span class="skill-desc">Strong understanding of IT fundamentals.</span>
+          </div>
+        </div>
+        <div class="skill">
+          <span class="dot"></span>
+          <div class="skill-body">
+            <span class="skill-name">AWS Management</span>
+            <span class="skill-desc">EKS, IAM, Lambda, EC2, CloudWatch, RDS, S3, Route53, VPC, KMS.</span>
+          </div>
+        </div>
+        <div class="skill">
+          <span class="dot"></span>
+          <div class="skill-body">
+            <span class="skill-name">Databases</span>
+            <span class="skill-desc">PostgreSQL, MongoDB, MSSQL.</span>
+          </div>
+        </div>
+        <div class="skill">
+          <span class="dot"></span>
+          <div class="skill-body">
+            <span class="skill-name">Containerization</span>
+            <span class="skill-desc">Docker, Docker Compose.</span>
+          </div>
+        </div>
+        <div class="skill">
+          <span class="dot"></span>
+          <div class="skill-body">
+            <span class="skill-name">CI/CD</span>
+            <span class="skill-desc">Jenkins, CircleCI.</span>
+          </div>
+        </div>
+        <div class="skill">
+          <span class="dot"></span>
+          <div class="skill-body">
+            <span class="skill-name">Development</span>
+            <span class="skill-desc">Java, JavaScript.</span>
+          </div>
+        </div>
+        <div class="skill">
+          <span class="dot"></span>
+          <div class="skill-body">
+            <span class="skill-name">Automation / Scripting</span>
+            <span class="skill-desc">Bash, Python.</span>
+          </div>
+        </div>
+        <div class="skill">
+          <span class="dot"></span>
+          <div class="skill-body">
+            <span class="skill-name">Alert Management</span>
+            <span class="skill-desc">Zabbix, Grafana, New Relic, CloudWatch.</span>
+          </div>
+        </div>
+        <div class="skill">
+          <span class="dot"></span>
+          <div class="skill-body">
+            <span class="skill-name">Orchestration</span>
+            <span class="skill-desc">Kubernetes.</span>
+          </div>
+        </div>
+        <div class="skill">
+          <span class="dot"></span>
+          <div class="skill-body">
+            <span class="skill-name">Web Servers</span>
+            <span class="skill-desc">Nginx.</span>
+          </div>
+        </div>
+        <div class="skill">
+          <span class="dot"></span>
+          <div class="skill-body">
+            <span class="skill-name">DNS &amp; CDN</span>
+            <span class="skill-desc">Cloudflare, CloudFront.</span>
+          </div>
+        </div>
+        <div class="skill">
+          <span class="dot"></span>
+          <div class="skill-body">
+            <span class="skill-name">Infrastructure as Code</span>
+            <span class="skill-desc">Terraform.</span>
+          </div>
+        </div>
+        <div class="skill">
+          <span class="dot"></span>
+          <div class="skill-body">
+            <span class="skill-name">Project Management Tools</span>
+            <span class="skill-desc">Jira, Confluence, Bitbucket, GitHub.</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section aria-labelledby="exp-heading">
+      <h2 id="exp-heading">Work Experience</h2>
+      <div class="experience">
+        <article class="role">
+          <div class="role-head">
+            <h3 class="role-title">DevOps Engineer · <span class="role-company">ITX Corp</span></h3>
+            <span class="role-dates">2022 — Present</span>
+          </div>
+          <ul>
+            <li>Manage Kubernetes, AWS, and Terraform.</li>
+            <li>Handle CI/CD pipelines.</li>
+            <li>Troubleshoot and manage incidents for a large e-commerce platform.</li>
+          </ul>
+        </article>
+
+        <article class="role">
+          <div class="role-head">
+            <h3 class="role-title">SysAdmin / DevOps · <span class="role-company">Mobbex</span></h3>
+            <span class="role-dates">2020 — 2022</span>
+          </div>
+          <ul>
+            <li>Managed Docker and Docker Compose.</li>
+            <li>Administered Kubernetes.</li>
+            <li>Developed CI/CD pipelines with Jenkins and ArgoCD.</li>
+            <li>Oversaw AWS management: IAM, Lambda, EC2, Kubernetes, CloudWatch, RDS, S3, Route53, VPC, KMS, EKS.</li>
+            <li>Conducted server monitoring using Zabbix and Grafana.</li>
+            <li>Developed backend services in Java and NodeJS.</li>
+            <li>Migrated services/microservices from ElasticBeanstalk, ECS, and EC2 to Kubernetes.</li>
+          </ul>
+        </article>
+
+        <article class="role">
+          <div class="role-head">
+            <h3 class="role-title">Developer · <span class="role-company">Innqube</span></h3>
+            <span class="role-dates">2018 — Sep 2020</span>
+          </div>
+          <ul>
+            <li>Worked with Angular, Spring Boot, Java, Postgres, REST API, HTML/CSS.</li>
+          </ul>
+        </article>
+
+        <article class="role">
+          <div class="role-head">
+            <h3 class="role-title">IT Technician · <span class="role-company">IBM Argentina</span></h3>
+            <span class="role-dates">2009 — 2017</span>
+          </div>
+          <ul>
+            <li>1st/2nd line support across servers, workstations, ATMs and telecom equipment for enterprise customers.</li>
+            <li>Diagnosed and resolved desktop, application, networking and infrastructure incidents (remote and on-site).</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
