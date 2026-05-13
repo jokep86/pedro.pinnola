@@ -55,8 +55,5 @@ Phone: +54 9 294 431 2772
 **IT Technician**  
 *2009 - 2017*
 
-- Installed and maintained IT equipment, including servers, workstations, and ATMs.
-- Provided remote and on-site customer support.
-- Diagnosed desktop, application, networking, and infrastructure issues.
-- Delivered 1st/2nd line support.
-- Installed and supported telecommunication equipment.
+- 1st/2nd line support across servers, workstations, ATMs and telecom equipment for enterprise customers.
+- Diagnosed and resolved desktop, application, networking and infrastructure incidents (remote and on-site).
