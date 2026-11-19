@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Pedro Pinnola — DevOps Engineer</title>
-  <meta name="description" content="Pedro Pinnola — DevOps Engineer based in Argentina. Kubernetes, AWS, Terraform, CI/CD." />
+  <meta name="description" content="Pedro Pinnola — DevOps Engineer based in Argentina, EU citizen. AWS, Kubernetes, Terraform, CI/CD, AI agents for operations." />
   <meta name="theme-color" content="#0b1220" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -181,6 +181,7 @@
       font-size: .95rem;
       display: block;
     }
+    .summary { margin: 0; color: var(--ink-soft); font-size: .95rem; }
     .skill-desc {
       color: var(--muted);
       font-size: .9rem;
@@ -305,7 +306,7 @@
       <ul class="contact">
         <li>
           <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-          Argentina
+          Bariloche, Argentina · EU citizen
         </li>
         <li>
           <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg>
@@ -322,84 +323,26 @@
       </ul>
     </header>
 
+    <section aria-labelledby="summary-heading">
+      <h2 id="summary-heading">Summary</h2>
+      <p class="summary">DevOps engineer with 6 years running production infrastructure on Amazon Web Services (AWS) and Kubernetes, and 17 years in IT overall: from field hardware support at IBM to backend development and DevOps. I run Kubernetes workloads, manage infrastructure with Terraform and maintain CI/CD pipelines (CircleCI, GitLab CI; earlier Jenkins and Argo CD), and I migrated large SQL Server databases to Amazon RDS. I also design and run AI agent workflows with Claude Code and the Model Context Protocol (MCP) for vulnerability triage, merge-request review, runbooks and documentation, with human approval of every change.</p>
+    </section>
+
     <section aria-labelledby="skills-heading">
       <h2 id="skills-heading">Skills</h2>
       <div class="skills">
         <div class="skill">
           <span class="dot"></span>
           <div class="skill-body">
-            <span class="skill-name">AWS Management</span>
-            <span class="skill-desc">EKS, IAM, Lambda, EC2, CloudWatch, RDS, S3, Route53, VPC, KMS.</span>
+            <span class="skill-name">Cloud (AWS, 6 years)</span>
+            <span class="skill-desc">EKS, EC2, ECS, Lambda, RDS, S3, VPC, IAM, KMS, Route 53, DMS, CloudWatch, CloudFront.</span>
           </div>
         </div>
         <div class="skill">
           <span class="dot"></span>
           <div class="skill-body">
-            <span class="skill-name">Databases</span>
-            <span class="skill-desc">PostgreSQL, MongoDB, MSSQL.</span>
-          </div>
-        </div>
-        <div class="skill">
-          <span class="dot"></span>
-          <div class="skill-body">
-            <span class="skill-name">Containerization</span>
-            <span class="skill-desc">Docker, Docker Compose.</span>
-          </div>
-        </div>
-        <div class="skill">
-          <span class="dot"></span>
-          <div class="skill-body">
-            <span class="skill-name">CI/CD</span>
-            <span class="skill-desc">Jenkins, CircleCI.</span>
-          </div>
-        </div>
-        <div class="skill">
-          <span class="dot"></span>
-          <div class="skill-body">
-            <span class="skill-name">Development</span>
-            <span class="skill-desc">Java, JavaScript.</span>
-          </div>
-        </div>
-        <div class="skill">
-          <span class="dot"></span>
-          <div class="skill-body">
-            <span class="skill-name">Automation / Scripting</span>
-            <span class="skill-desc">Bash, Python.</span>
-          </div>
-        </div>
-        <div class="skill">
-          <span class="dot"></span>
-          <div class="skill-body">
-            <span class="skill-name">AI-Assisted Engineering</span>
-            <span class="skill-desc">Claude Code, ChatGPT, GitHub Copilot for automation, scripting, troubleshooting and code review.</span>
-          </div>
-        </div>
-        <div class="skill">
-          <span class="dot"></span>
-          <div class="skill-body">
-            <span class="skill-name">Alert Management</span>
-            <span class="skill-desc">Zabbix, Grafana, New Relic, CloudWatch.</span>
-          </div>
-        </div>
-        <div class="skill">
-          <span class="dot"></span>
-          <div class="skill-body">
-            <span class="skill-name">Orchestration</span>
-            <span class="skill-desc">Kubernetes.</span>
-          </div>
-        </div>
-        <div class="skill">
-          <span class="dot"></span>
-          <div class="skill-body">
-            <span class="skill-name">Web Servers</span>
-            <span class="skill-desc">Nginx.</span>
-          </div>
-        </div>
-        <div class="skill">
-          <span class="dot"></span>
-          <div class="skill-body">
-            <span class="skill-name">DNS &amp; CDN</span>
-            <span class="skill-desc">Cloudflare, CloudFront.</span>
+            <span class="skill-name">Containers and Orchestration</span>
+            <span class="skill-desc">Kubernetes, Amazon EKS, Helm, Docker, Docker Compose.</span>
           </div>
         </div>
         <div class="skill">
@@ -412,8 +355,78 @@
         <div class="skill">
           <span class="dot"></span>
           <div class="skill-body">
-            <span class="skill-name">Project Management Tools</span>
-            <span class="skill-desc">Jira, Confluence, Bitbucket, GitHub.</span>
+            <span class="skill-name">CI/CD and GitOps</span>
+            <span class="skill-desc">CircleCI, GitLab CI, Jenkins, GitOps with Argo CD.</span>
+          </div>
+        </div>
+        <div class="skill">
+          <span class="dot"></span>
+          <div class="skill-body">
+            <span class="skill-name">Monitoring and Alerting</span>
+            <span class="skill-desc">Grafana, Zabbix, New Relic, Amazon CloudWatch.</span>
+          </div>
+        </div>
+        <div class="skill">
+          <span class="dot"></span>
+          <div class="skill-body">
+            <span class="skill-name">Databases</span>
+            <span class="skill-desc">Microsoft SQL Server, PostgreSQL, MongoDB, MySQL, Amazon RDS (administration and migration).</span>
+          </div>
+        </div>
+        <div class="skill">
+          <span class="dot"></span>
+          <div class="skill-body">
+            <span class="skill-name">Scripting and Development</span>
+            <span class="skill-desc">Python, Bash, Java (Spring Boot), Node.js, JavaScript.</span>
+          </div>
+        </div>
+        <div class="skill">
+          <span class="dot"></span>
+          <div class="skill-body">
+            <span class="skill-name">Linux</span>
+            <span class="skill-desc">Linux server administration.</span>
+          </div>
+        </div>
+        <div class="skill">
+          <span class="dot"></span>
+          <div class="skill-body">
+            <span class="skill-name">Networking and Edge</span>
+            <span class="skill-desc">Nginx, Cloudflare, Route 53, VPC.</span>
+          </div>
+        </div>
+        <div class="skill">
+          <span class="dot"></span>
+          <div class="skill-body">
+            <span class="skill-name">Security</span>
+            <span class="skill-desc">Container vulnerability scanning, CVE triage and remediation, AWS IAM.</span>
+          </div>
+        </div>
+        <div class="skill">
+          <span class="dot"></span>
+          <div class="skill-body">
+            <span class="skill-name">AI Agents and AI-Assisted Engineering</span>
+            <span class="skill-desc">Claude Code, Model Context Protocol (MCP), multi-agent orchestration; ChatGPT and GitHub Copilot.</span>
+          </div>
+        </div>
+        <div class="skill">
+          <span class="dot"></span>
+          <div class="skill-body">
+            <span class="skill-name">Operations</span>
+            <span class="skill-desc">Incident management, deployment runbooks.</span>
+          </div>
+        </div>
+        <div class="skill">
+          <span class="dot"></span>
+          <div class="skill-body">
+            <span class="skill-name">Collaboration Tools</span>
+            <span class="skill-desc">Jira, Confluence, GitLab, GitHub, Bitbucket.</span>
+          </div>
+        </div>
+        <div class="skill">
+          <span class="dot"></span>
+          <div class="skill-body">
+            <span class="skill-name">Languages</span>
+            <span class="skill-desc">Spanish (native), English (professional working).</span>
           </div>
         </div>
       </div>
@@ -424,50 +437,80 @@
       <div class="experience">
         <article class="role">
           <div class="role-head">
-            <h3 class="role-title">DevOps Engineer · <span class="role-company">ITX Corp</span></h3>
-            <span class="role-dates">2022 — Present</span>
+            <h3 class="role-title">DevOps Engineer · <span class="role-company">ITX Corp.</span></h3>
+            <span class="role-dates">Apr 2022 — Present</span>
           </div>
           <ul>
-            <li>Manage Kubernetes, AWS, and Terraform.</li>
-            <li>Handle CI/CD pipelines.</li>
-            <li>Troubleshoot and manage incidents for a large e-commerce platform.</li>
+            <li>DevOps for client platforms, including a large e-commerce platform, at a software services company.</li>
+            <li>Operate Kubernetes environments on AWS with Helm and Terraform (Infrastructure as Code).</li>
+            <li>Migrated large Microsoft SQL Server databases to Amazon RDS.</li>
+            <li>Build and maintain CI/CD pipelines in CircleCI and GitLab CI; review merge requests.</li>
+            <li>Troubleshoot and manage incidents for a large e-commerce platform; monitor production with New Relic.</li>
+            <li>Triage and remediate container vulnerabilities (CVE) from image scanning.</li>
+            <li>Infrastructure and build work for a ColdFusion 2021 to 2025 platform upgrade: assessment, build readiness, regression replay testing and deployment runbooks.</li>
+            <li>Designed and run my own AI agent workflows (Claude Code, MCP) for my DevOps work: specialist agents for review, vulnerability triage, runbooks and documentation, parallel agents in isolated git worktrees, and guardrails with independent review, secret scanning, destructive-command blocking and human approval.</li>
           </ul>
         </article>
 
         <article class="role">
           <div class="role-head">
-            <h3 class="role-title">SysAdmin / DevOps · <span class="role-company">Mobbex</span></h3>
-            <span class="role-dates">2020 — 2022</span>
+            <h3 class="role-title">Sysadmin / DevOps · <span class="role-company">Mobbex</span></h3>
+            <span class="role-dates">Sep 2020 — Apr 2022</span>
           </div>
           <ul>
-            <li>Managed Docker and Docker Compose.</li>
-            <li>Administered Kubernetes.</li>
-            <li>Developed CI/CD pipelines with Jenkins and ArgoCD.</li>
-            <li>Oversaw AWS management: IAM, Lambda, EC2, Kubernetes, CloudWatch, RDS, S3, Route53, VPC, KMS, EKS.</li>
-            <li>Conducted server monitoring using Zabbix and Grafana.</li>
-            <li>Developed backend services in Java and NodeJS.</li>
-            <li>Migrated services/microservices from ElasticBeanstalk, ECS, and EC2 to Kubernetes.</li>
+            <li>Managed AWS infrastructure: EKS, EC2, Lambda, RDS, S3, Route 53, VPC, KMS, CloudWatch; Terraform.</li>
+            <li>Migrated services and microservices from Elastic Beanstalk, ECS and EC2 to Kubernetes.</li>
+            <li>Ran Kubernetes workloads on Amazon EKS with Docker.</li>
+            <li>Built CI/CD pipelines with Jenkins; GitOps deployments with Argo CD.</li>
+            <li>Administered MongoDB; managed AWS IAM accounts and access.</li>
+            <li>Server monitoring and alerting with Zabbix and Grafana.</li>
+            <li>Automation with Python; backend development in Java (Spring Boot) and Node.js.</li>
           </ul>
         </article>
 
         <article class="role">
           <div class="role-head">
-            <h3 class="role-title">Developer · <span class="role-company">Innqube</span></h3>
-            <span class="role-dates">2018 — Sep 2020</span>
+            <h3 class="role-title">Web Developer · <span class="role-company">InnQube</span></h3>
+            <span class="role-dates">Jun 2018 — Sep 2020</span>
           </div>
           <ul>
-            <li>Worked with Angular, Spring Boot, Java, Postgres, REST API, HTML/CSS.</li>
+            <li>Built web and mobile applications with Angular, Ionic and Java Spring Boot; REST APIs on PostgreSQL and MySQL; Git, SVN, Firebase.</li>
           </ul>
         </article>
 
         <article class="role">
           <div class="role-head">
-            <h3 class="role-title">IT Technician · <span class="role-company">IBM Argentina</span></h3>
-            <span class="role-dates">2009 — 2017</span>
+            <h3 class="role-title">Technical Service Representative · <span class="role-company">IBM</span></h3>
+            <span class="role-dates">Jun 2009 — Oct 2017</span>
           </div>
           <ul>
-            <li>1st/2nd line support across servers, workstations, ATMs and telecom equipment for enterprise customers.</li>
-            <li>Diagnosed and resolved desktop, application, networking and infrastructure incidents (remote and on-site).</li>
+            <li>1st/2nd line support across servers, workstations, ATMs and telecom equipment for banking and non-banking clients.</li>
+            <li>Diagnosed and resolved desktop, application, networking and infrastructure incidents, by remote access and on site.</li>
+          </ul>
+        </article>
+
+        <article class="role">
+          <div class="role-head">
+            <h3 class="role-title">PC Repair Technician · <span class="role-company">Chips Computación</span></h3>
+            <span class="role-dates">Jun 2008 — Jun 2009</span>
+          </div>
+          <ul>
+            <li>Ran the technical service of a computer shop.</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section aria-labelledby="edu-heading">
+      <h2 id="edu-heading">Education</h2>
+      <div class="experience">
+        <article class="role">
+          <div class="role-head">
+            <h3 class="role-title">Electromechanical Technician · <span class="role-company">C.E.T. N° 2 "Jorge Newbery"</span></h3>
+          </div>
+          <ul>
+            <li>Secondary technical degree.</li>
+            <li>Course: AWS Cloud Practitioner (course completed).</li>
           </ul>
         </article>
       </div>
